@@ -1,0 +1,24 @@
+[
+    {
+        "test": {
+            "id": "1",
+            "commands": [
+                "go version"
+            ],
+            "pre_req": [
+                "go"
+            ]
+        }
+    },
+    {
+        "git": {
+            "id": "2",
+            "commands": [
+                "git --version"
+            ],
+            "pre_req": [
+                "git"
+            ]
+        }
+    }
+]

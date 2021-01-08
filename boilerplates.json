@@ -1,24 +1,22 @@
 [
     {
-        "test": {
-            "id": "1",
-            "commands": [
-                "go version"
-            ],
-            "pre_req": [
-                "go"
-            ]
-        }
+        "id": "go",
+        "commands": [
+            "go version"
+        ],
+        "preReq": [
+            "go"
+        ],
+        "details":"Command is used to check the version of Golang install in your system"
     },
     {
-        "git": {
-            "id": "2",
-            "commands": [
-                "git --version"
-            ],
-            "pre_req": [
-                "git"
-            ]
-        }
+        "id": "git",
+        "commands": [
+            "git --version"
+        ],
+        "preReq": [
+            "git"
+        ],
+        "details":"Command is used to check the version of Git install in your system"
     }
 ]

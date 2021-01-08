@@ -14,7 +14,7 @@ func main() {
 		case "help":
 			cmd.Help()
 		case "explore":
-			cmd.Explore(bp)
+			cmd.Explore(bp, os.Args)
 		}
 	}
 }

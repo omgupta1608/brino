@@ -5,10 +5,13 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+
+	models "github.com/omgupta1608/brino/models"
 )
 
 //LoadData - loading biolerplates data from json
-func LoadData() map[string]interface{} {
+func LoadData() []models.BoilerPlate {
+	var bp []models.BoilerPlate
 	bpData, err := os.Open("boilerplates.json")
 	if err != nil {
 		fmt.Println(err)
@@ -18,29 +21,7 @@ func LoadData() map[string]interface{} {
 
 	byteValue, _ := ioutil.ReadAll(bpData)
 
-	var result map[string]interface{}
-	json.Unmarshal([]byte(byteValue), &result)
+	json.Unmarshal([]byte(byteValue), &bp)
 
-	return result
+	return bp
 }
-
-/*
-JSON to Go Map
-
-map[boilerplates:
-        [map[test:
-            map[
-                commands:[go version]
-                id:1
-                pre_req:[go]
-            ]
-        ]
-        map[git:
-            map[
-                commands:[git --version]
-                id:2
-                pre_req:[git]
-            ]
-        ]
-    ]
-] */

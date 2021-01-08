@@ -7,7 +7,9 @@
         "preReq": [
             "go"
         ],
-        "details":"Command is used to check the version of Golang install in your system"
+        "details":"Command is used to check the version of Golang install in your system",
+        "website": "https://golang.org",
+        "docs": "https://golang.org/doc/"
     },
     {
         "id": "git",
@@ -17,6 +19,8 @@
         "preReq": [
             "git"
         ],
-        "details":"Command is used to check the version of Git install in your system"
+        "details":"Command is used to check the version of Git install in your system",
+        "website": "https://git-scm.com",
+        "docs": "https://git-scm.com/doc/"
     }
 ]

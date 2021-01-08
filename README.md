@@ -1,4 +1,4 @@
 # brino
 CLI Tool for generating boilerplate code
 
-### Only Windows Compatible till now.
+### Some Comamnds are only windows compatible till now.

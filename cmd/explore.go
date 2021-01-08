@@ -8,23 +8,23 @@ import (
 )
 
 //Explore - used for explore command
-func Explore(bp []models.BoilerPlate, args []string) {
+func Explore(bp map[string]models.BoilerPlate, args []string) {
 
 	ok, hasMore, flags := utils.ValidateCommand("explore", args)
 	if !ok {
-		fmt.Println("Invalid Command")
+		fmt.Println("Invalid Command Syntax")
 		return
 	}
 
 	if hasMore {
 		if flags[0] == "-d" || flags[0] == "-D" {
-			for i := 0; i < len(bp); i++ {
-				fmt.Printf("%s - %s\n", bp[i].ID, bp[i].Details)
+			for _, b := range bp {
+				fmt.Printf("%s - %s\n", b.ID, b.Details)
 			}
 		}
 	} else {
-		for i := 0; i < len(bp); i++ {
-			fmt.Println(bp[i].ID)
+		for _, b := range bp {
+			fmt.Printf("%s\n", b.ID)
 		}
 	}
 }

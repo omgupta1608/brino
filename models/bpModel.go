@@ -6,4 +6,6 @@ type BoilerPlate struct {
 	Commands []string
 	PreReq   []string
 	Details  string
+	Website  string
+	Docs     string
 }

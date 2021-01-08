@@ -10,7 +10,7 @@ import (
 )
 
 //LoadData - loading biolerplates data from json
-func LoadData() []models.BoilerPlate {
+func LoadData() map[string]models.BoilerPlate {
 	var bp []models.BoilerPlate
 	bpData, err := os.Open("boilerplates.json")
 	if err != nil {
@@ -23,5 +23,10 @@ func LoadData() []models.BoilerPlate {
 
 	json.Unmarshal([]byte(byteValue), &bp)
 
-	return bp
+	var bpHash = make(map[string]models.BoilerPlate)
+	for i := 0; i < len(bp); i++ {
+		bpHash[bp[i].ID] = bp[i]
+	}
+
+	return bpHash
 }

@@ -7,4 +7,4 @@ CLI Tool for generating boilerplate code
  - Visit official websites/docs of available boilerplates.
  - Request a new boilerplate
 
-### Some Commands are only windows compatible till now.
+### ❗Some Commands are only windows compatible till now❗
